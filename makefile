@@ -1,22 +1,18 @@
 FILES :=                              \
     .travis.yml                       \
-    darwin-tests/hed287-RunDarwin.out  \
-    darwin-tests/hed287-TestDarwin.c++ \
-    darwin-tests/hed287-TestDarwin.out \
-    Creature.c++					 \
-    Darwin.c++                       \
-    Darwin.h                         \
-    Darwin.log                       \
-    Darwin.pdf						 \
+    life-tests/hed287-RunLife.in   \
+    life-tests/hed287-RunLife.out  \
+    life-tests/hed287-TestLife.c++ \
+    life-tests/hed287-TestLife.out \
+    Life.c++                       \
+    Life.h                         \
+    Life.log                       \
     html                              \
-    Instruction.h 					\
-    Instructions.h 					\
-    RunDarwin.c++                    \
-    RunDarwin.out                    \
-    Species.c++						\
-    Species.h 						\
-    TestDarwin.c++                   \
-    TestDarwin.out
+    RunLife.c++                    \
+    RunLife.in                     \
+    RunLife.out                    \
+    TestLife.c++                   \
+    TestLife.out
 
 CXX        := g++-4.8
 CXXFLAGS   := -pedantic -std=c++11 -Wall
@@ -48,20 +44,18 @@ clean:
 	rm -f *.gcda
 	rm -f *.gcno
 	rm -f *.gcov
-	rm -f RunDarwin
-	rm -f RunDarwin.tmp
-	rm -f TestDarwin
-	rm -f TestDarwin.tmp
-	rm -f test
-	rm -f OtherTest
+	rm -f RunLife
+	rm -f RunLife.tmp
+	rm -f TestLife
+	rm -f TestLife.tmp
 
 config:
 	git config -l
 
 scrub:
 	make clean
-	rm -f  Darwin.log
-	rm -rf darwin-tests
+	rm -f  Life.log
+	rm -rf life-tests
 	rm -rf html
 	rm -rf latex
 
@@ -72,32 +66,32 @@ status:
 	git remote -v
 	git status
 
-test: RunDarwin.tmp TestDarwin.tmp
+test: RunLife.tmp TestLife.tmp
 
-darwin-tests:
-	git clone https://github.com/cs371p-fall-2015/darwin-tests.git
+life-tests:
+	git clone https://github.com/cs371p-fall-2015/life-tests.git
 
-html: Doxyfile Darwin.h Darwin.c++ RunDarwin.c++ TestDarwin.c++
+html: Doxyfile Life.h Life.c++ RunLife.c++ TestLife.c++
 	doxygen Doxyfile
 
-Darwin.log:
-	git log > Darwin.log
+Life.log:
+	git log > Life.log
 
 Doxyfile:
 	doxygen -g
 
-RunDarwin: Darwin.h Instruction.h Species.h Creature.h Darwin.c++ Species.c++ Creature.c++ Instructions.h RunDarwin.c++
-	$(CXX) $(CXXFLAGS) Darwin.h Instruction.h Species.h Creature.h Darwin.c++ Species.c++ Creature.c++ Instructions.h RunDarwin.c++ -o RunDarwin
+RunLife: Life.h Life.c++ RunLife.c++
+	$(CXX) $(CXXFLAGS) $(GCOVFLAGS) Life.c++ RunLife.c++ -o RunLife
 
-RunDarwin.tmp: RunDarwin
-	./RunDarwin > RunDarwin.tmp
-	diff RunDarwin.tmp RunDarwin.out
+RunLife.tmp: RunLife
+	./RunLife < RunLife.in > RunLife.tmp
+	diff RunLife.tmp RunLife.out
 
-TestDarwin: Darwin.h Instruction.h Species.h Creature.h Darwin.c++ Species.c++ Creature.c++ Instructions.h TestDarwin.c++
-	$(CXX) $(CXXFLAGS) $(GCOVFLAGS) Darwin.h Instruction.h Species.h Creature.h Darwin.c++ Species.c++ Creature.c++ Instructions.h TestDarwin.c++ -o TestDarwin $(LDFLAGS)
+TestLife: Life.h Life.c++ TestLife.c++
+	$(CXX) $(CXXFLAGS) $(GCOVFLAGS) Life.c++ TestLife.c++ -o TestLife $(LDFLAGS)
 
-TestDarwin.tmp: TestDarwin
-	$(VALGRIND) ./TestDarwin                                       >  TestDarwin.tmp 2>&1
-	$(GCOV) -b Darwin.c++     | grep -A 5 "File 'Darwin.c++'"     >> TestDarwin.tmp
-	$(GCOV) -b TestDarwin.c++ | grep -A 5 "File 'TestDarwin.c++'" >> TestDarwin.tmp
-	cat TestDarwin.tmp
+TestLife.tmp: TestLife
+	$(VALGRIND) ./TestLife                                       >  TestLife.tmp 2>&1
+	$(GCOV) -b Life.c++     | grep -A 5 "File 'Life.c++'"     >> TestLife.tmp
+	$(GCOV) -b TestLife.c++ | grep -A 5 "File 'TestLife.c++'" >> TestLife.tmp
+	cat TestLife.tmp
