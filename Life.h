@@ -230,6 +230,8 @@ private:
 	 */
 	vector<vector<C>> grid;
 public:
+	//These save the number of evolutions and frequency of prints
+	int e, f;
 	// --------------------------
 	// Lifeconstructor
 	// --------------------------
@@ -239,8 +241,8 @@ public:
 	Life(istream& in){
 		int r, c;
 		string type;
-		in>>type;
-		in>>r>>c;
+		in >> type;
+		in >> r >> c >> e >> f;
 		for(int i = 0; i < r; ++i){
 			grid.push_back(vector<C>());
 			for(int j = 0; j < c; ++j){

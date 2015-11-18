@@ -437,7 +437,7 @@ TEST(Life, Cell_GetPointer3) {
 // ----
 
 TEST(Life, Life_Constructor1) {
-	stringstream in("ConwayCell\n4\n4\n....\n.**.\n.**.\n....");
+	stringstream in("ConwayCell\n4\n4\n0\n1\n....\n.**.\n.**.\n....");
 	Life<ConwayCell> l(in);
 	stringstream out;
 	l.print_grid(0, out);
@@ -445,7 +445,7 @@ TEST(Life, Life_Constructor1) {
 }
 
 TEST(Life, Life_Constructor2) {
-	stringstream in("FredkinCell\n4\n4\n----\n-00-\n-00-\n----");
+	stringstream in("FredkinCell\n4\n4\n0\n1\n----\n-00-\n-00-\n----");
 	Life<FredkinCell> l(in);
 	stringstream out;
 	l.print_grid(0, out);
@@ -453,7 +453,7 @@ TEST(Life, Life_Constructor2) {
 }
 
 TEST(Life, Life_Constructor3) {
-	stringstream in("Cell\n4\n4\n....\n-**-\n-00-\n----");
+	stringstream in("Cell\n4\n4\n0\n1\n....\n-**-\n-00-\n----");
 	Life<Cell> l(in);
 	stringstream out;
 	l.print_grid(0, out);
@@ -461,7 +461,7 @@ TEST(Life, Life_Constructor3) {
 }
 
 TEST(Life, Life_RunEvo1) {
-	stringstream in("ConwayCell\n5\n5\n.....\n..*..\n..*..\n..*..\n.....");
+	stringstream in("ConwayCell\n5\n5\n1\n1\n.....\n..*..\n..*..\n..*..\n.....");
 	Life<ConwayCell> l(in);
 	stringstream out;
 	l.print_grid(1, out);// test run_evolution within print_grid
@@ -469,7 +469,7 @@ TEST(Life, Life_RunEvo1) {
 }
 
 TEST(Life, Life_RunEvo2) {
-	stringstream in("FredkinCell\n5\n5\n-----\n--00-\n-0-0-\n-00--\n-----");
+	stringstream in("FredkinCell\n5\n5\n1\n1\n-----\n--00-\n-0-0-\n-00--\n-----");
 	Life<FredkinCell> l(in);
 	stringstream out;
 	l.print_grid(1, out);// test run_evolution within print_grid
@@ -477,7 +477,7 @@ TEST(Life, Life_RunEvo2) {
 }
 
 TEST(Life, Life_RunEvo3) {
-	stringstream in("Cell\n5\n5\n-----\n--00-\n-0-0-\n-00--\n-----");
+	stringstream in("Cell\n5\n5\n2\n1\n-----\n--00-\n-0-0-\n-00--\n-----");
 	Life<Cell> l(in);
 	stringstream out;
 	l.print_grid(1, out);// test run_evolution within print_grid
