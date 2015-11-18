@@ -64,7 +64,7 @@ public:
 	// living
 	// -------
 	/**
-	 * Tells whether a cell is alive or not.
+	 * Cells whether a cell is alive or not.
 	 * Since that information is simply stored as a bool in state, I could just return the value of state.
 	 */
 	bool living();
@@ -209,4 +209,123 @@ public:
 	 * Runs living() for the cell type
 	 */
 	bool living();
+};
+
+template<typename C>
+class Life{
+private:
+	// -----------------
+	// p and _g
+	// -----------------
+	/**
+	 * P stores the current population.
+	 * _g stores the current generation.
+	 */
+	int p = 0, _g=0;
+	// ----
+	// grid
+	// ----
+	/**
+	 * Stored the world as a vector of vectors of user specified type.
+	 */
+	vector<vector<C>> grid;
+public:
+	// --------------------------
+	// Lifeconstructor
+	// --------------------------
+	/**
+	 * Makes a grid based on the received input.
+	 */
+	Life(istream& in){
+		int r, c;
+		string type;
+		in>>type;
+		in>>r>>c;
+		for(int i = 0; i < r; ++i){
+			grid.push_back(vector<C>());
+			for(int j = 0; j < c; ++j){
+				char temp;
+				in >> temp;
+
+				C cell(temp);
+				grid[i].push_back(cell);
+				if(cell.living())
+					++p;
+			}
+		}
+	}
+
+private:
+	// -------------
+	// run_evol
+	// -------------
+	/** 
+	 * Runs evolution until _g, reaches the input generation, max_g.
+	 * All neighboring cells are supplied to the evolving cell. Some neighbors' state will be ignored.
+	 * Cells needing change will be placed in a buffer and changed after the turn.
+	 */
+	void run_evol(int max_g){
+		int r = grid.size(), c = grid[0].size();
+		for(; _g < max_g; ++_g){
+			vector<AbstractCell*> buffer;
+			// Iterate through the grid
+			for(int i = 0; i < r; ++i){
+				for(int j = 0; j < c; ++j){
+					// Construct a array of 8 pointers that'll later be used to determine the state of the neighbors.
+					AbstractCell* neighbors[8] = {NULL};
+					if(j - 1 >= 0){
+						if(i - 1 >= 0){
+							neighbors[0] = &grid[i-1][j-1];
+						}
+						neighbors[3] = &grid[i][j-1];
+						if(i + 1 < r){
+							neighbors[5] = &grid[i+1][j-1];
+						}
+					}
+					if(i - 1 >= 0)
+						neighbors[1] = &grid[i-1][j];
+					if(i + 1 < r)
+						neighbors[6] = &grid[i+1][j];
+					if(j + 1 < c){
+						if(i - 1 >= 0)
+							neighbors[2] = &grid[i-1][j+1];
+						neighbors[4] = &grid[i][j+1];
+						if(i + 1 < r)
+							neighbors[7] = &grid[i+1][j+1];
+					}
+
+					// If evolve() return true, which means the cell needs to shift its state, push it onto the buffer.
+					if(grid[i][j].evolve(neighbors))
+						buffer.push_back(&grid[i][j]);
+				}
+			}
+			// For each cell pointed by the buffer, shift its state.
+			for(AbstractCell* change : buffer){
+				change->shift_state();
+				if(change->living())
+					++p;
+				else
+					--p;
+			}
+		}
+	}
+
+public:
+	// ----------
+	// print_grid
+	// ----------
+	/**
+	 * Prints the grid of the current generation, g.
+	 */
+	void print_grid(int g, ostream& w){
+		run_evol(g);
+		w << "Generation = " << g << ", Population = " << p << "." << endl;
+		for(unsigned int i = 0; i < grid.size(); ++i){
+			for(unsigned int j = 0; j < grid[i].size(); ++j){
+				w << grid[i][j].state();
+			}
+			w << endl;
+		}
+		w << endl;
+	}
 };
