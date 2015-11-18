@@ -7,6 +7,10 @@
 
 using namespace std;
 
+// -------------
+// AbstractCell
+// -------------
+
 class AbstractCell {
 
 protected:
@@ -71,6 +75,10 @@ public:
 
 	 };
 
+// ----------
+// ConwayCell
+// ----------
+
 class ConwayCell: public AbstractCell{
 
 public:
@@ -98,6 +106,10 @@ public:
 	 */
 	char state();
 };
+
+// -----------
+// FredkinCell
+// -----------
 
 class FredkinCell: public AbstractCell{
 
@@ -138,6 +150,9 @@ public:
 	char state();
 };
 
+// -----
+// Cell
+// -----
 class Cell{
 private:
 	// --
@@ -212,6 +227,10 @@ public:
 };
 
 template<typename C>
+
+// -----
+// Life
+// -----
 class Life{
 private:
 	// -----------------
@@ -230,7 +249,12 @@ private:
 	 */
 	vector<vector<C>> grid;
 public:
-	//These save the number of evolutions and frequency of prints
+	// -----------------
+	// e and f
+	// -----------------
+	/**
+	 * These save the number of evolutions and frequency of prints
+	 */
 	int e, f;
 	// --------------------------
 	// Lifeconstructor
