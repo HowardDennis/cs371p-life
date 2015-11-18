@@ -47,4 +47,19 @@ int main () {
     Life<ConwayCell> l5(cin);
     for(int g = 0; g <= l5.e; g += l5.f)
         l5.print_grid(g, cout);
+        
+    cout << "*** Life<FredkinCell> 100x75 ***" << endl << endl;
+    Life<ConwayCell> l6(cin);
+    for(int g = 0; g <= l6.e; g += l6.f)
+        l6.print_grid(g, cout);
+        
+    cout << "*** Life<ConwayCell> 150x60 ***" << endl << endl;
+    Life<ConwayCell> l7(cin);
+    for(int g = 0; g <= l7.e; g += l7.f)
+        l7.print_grid(g, cout);
+        
+    cout << "*** Life<Cell> 150x50 ***" << endl << endl;
+    Life<ConwayCell> l8(cin);
+    for(int g = 0; g <= l8.e; g += l8.f)
+        l8.print_grid(g, cout);
 }
