@@ -457,7 +457,6 @@ TEST(Life, Life_Constructor3) {
 	Life<Cell> l(in);
 	stringstream out;
 	l.print_grid(0, out);
-	cout << out.str();
 	ASSERT_EQ("Generation = 0, Population = 4.\n....\n-**-\n-00-\n----\n\n", out.str());
 }
 
