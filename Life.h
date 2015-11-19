@@ -286,11 +286,11 @@ public:
 					++p;
 			}
 		}
-		/*for(int i = 0; i < r; ++i){
+		for(int i = 0; i < r; ++i){
 			for(int j = 0; j < c; ++j){
 				iter.push_back(grid[i][j]);
 			}
-		}*/
+		}
 	}
 
 private:
@@ -387,11 +387,11 @@ public:
     }
     
     C* begin() { // 2nd: add typename
-   	return 0; //&iter[0];
+   	return &grid[0][0]; //&iter[0];
    }
 
    C* end() { // 3rd: add typename
-   	return 0; //&iter[iter.size() - 1];
+   	return &grid[0][3]; //&iter[iter.size() - 1];
    }
 };
 
