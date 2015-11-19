@@ -347,7 +347,7 @@ private:
 			}
 		}
 		for(int i = 0; i < grid.size(); ++i){
-			for(int j = 0; j < gid[0].size(); ++j){
+			for(int j = 0; j < grid[0].size(); ++j){
 				iter[i*grid.size() + j] = grid[i][j];
 			}
 		}
