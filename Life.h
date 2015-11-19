@@ -367,11 +367,6 @@ public:
 			w << endl;
 		}
 		w << endl;
-		/*for(int i = 0; i < grid.size(); ++i){
-			for(int j = 0; j < grid[0].size(); ++j){
-				iter[i*grid[0].size() + j] = grid[i][j];
-			}
-		}*/
 	}
 
 	// -----------------
@@ -387,10 +382,20 @@ public:
     }
     
     C* begin() { // 2nd: add typename
+    	for(int i = 0; i < grid.size(); ++i){
+		for(int j = 0; j < grid[0].size(); ++j){
+			iter[i*grid[0].size() + j] = grid[i][j];
+		}
+	}
    	return &grid[0][0]; //&iter[0];
    }
 
    C* end() { // 3rd: add typename
+   	for(int i = 0; i < grid.size(); ++i){
+		for(int j = 0; j < grid[0].size(); ++j){
+			iter[i*grid[0].size() + j] = grid[i][j];
+		}
+	}
    	return &grid[0][3]; //&iter[iter.size() - 1];
    }
 };
