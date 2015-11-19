@@ -387,7 +387,7 @@ public:
 			iter[i*grid[0].size() + j] = grid[i][j];
 		}
 	}
-   	return &grid[0][0]; //&iter[0];
+   	return &iter[0]; //&iter[0];
    }
 
    C* end() { // 3rd: add typename
@@ -396,7 +396,7 @@ public:
 			iter[i*grid[0].size() + j] = grid[i][j];
 		}
 	}
-   	return &grid[0][3]; //&iter[iter.size() - 1];
+   	return &iter[iter.size()]; //&iter[iter.size() - 1];
    }
 };
 
