@@ -291,6 +291,7 @@ public:
 			for(int j = 0; j < c; ++j){
 				iter.push_back(grid[i][j]);
 			}
+		}
 	}
 
 private:
