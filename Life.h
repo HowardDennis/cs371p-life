@@ -386,12 +386,12 @@ public:
     	return grid[n/w][n%w];
     }
     
-   typename vector<C>::iterator begin() { // 2nd: add typename
-   	return iter.begin();
+    C* begin() { // 2nd: add typename
+   	return *iter[0];
    }
 
-   typename vector<C>::iterator end() { // 3rd: add typename
-   	return iter.end();
+   C* end() { // 3rd: add typename
+   	return *iter[iter.size() - 1];
    }
 };
 
