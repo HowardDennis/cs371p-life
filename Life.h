@@ -381,7 +381,7 @@ public:
     	return grid[n/w][n%w];
     }
     
-    C*& begin() {
+    C* begin() {
     	for(int i = 0; i < grid.size(); ++i){
 		for(int j = 0; j < grid[0].size(); ++j){
 			iter[i*grid[0].size() + j] = grid[i][j];
@@ -390,7 +390,7 @@ public:
    	return &iter[0];
    }
 
-   C*& end() {
+   C* end() {
    	for(int i = 0; i < grid.size(); ++i){
 		for(int j = 0; j < grid[0].size(); ++j){
 			iter[i*grid[0].size() + j] = grid[i][j];
