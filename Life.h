@@ -346,11 +346,6 @@ private:
 					--p;
 			}
 		}
-		for(int i = 0; i < r; ++i){
-			for(int j = 0; j < c; ++j){
-				iter[i*c + j] = grid[i][j];
-			}
-		}
 	}
 
 
@@ -372,6 +367,11 @@ public:
 			w << endl;
 		}
 		w << endl;
+		for(int i = 0; i < grid.size(); ++i){
+			for(int j = 0; j < grid[0].size(); ++j){
+				iter[i*grid[0].size() + j] = grid[i][j];
+			}
+		}
 	}
 
 	// -----------------
