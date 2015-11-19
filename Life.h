@@ -386,12 +386,12 @@ public:
     	return grid[n/w][n%w];
     }
 
-    C* begin() {
-    	return &grid[0][0];
+    vector<C>::iterator begin() {
+    	return iter.begin();
     }
 
-    C* end() {
-    	return &grid[grid.size() - 1][grid[0].size()];
+    vector<C>::iterator end() {
+    	return iter.end();
     }
 };
 
