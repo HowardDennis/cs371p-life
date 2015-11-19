@@ -254,7 +254,7 @@ private:
 	/**
 	 * Iterable Vector
 	 */
-	//vector<C> iter;
+	vector<C> iter;
 public:
 	// -----------------
 	// e and f
