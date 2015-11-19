@@ -356,6 +356,7 @@ private:
 
 
 public:
+	typedef typename vector<C>::iterator iterator; //for begin and end
 	// ----------
 	// print_grid
 	// ----------
@@ -380,18 +381,18 @@ public:
 	/**
 	 * Make the grid in Life iterable
 	 */
-    C& at(int n) {
+    const C& at(int n) const {
     	assert(n >= 0 && (n < grid[0].size()*grid.size()));
     	int w = grid[0].size();
     	return grid[n/w][n%w];
     }
 
-    C* begin() {
-    	return iter.begin();
-    }
+   typename vector<C>::iterator begin() { // 2nd: add typename
+   	return iter.begin();
+   }
 
-    C* end() {
-    	return iter.end();
-    }
+   typename vector<C>::iterator end() { // 3rd: add typename
+   	return iter.end();
+   }
 };
 
