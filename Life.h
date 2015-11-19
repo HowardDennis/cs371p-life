@@ -381,7 +381,7 @@ public:
 	/**
 	 * Make the grid in Life iterable
 	 */
-    const C& at(int n) const {
+    C at(int n) {
     	assert(n >= 0 && (n < grid[0].size()*grid.size()));
     	int w = grid[0].size();
     	return grid[n/w][n%w];
