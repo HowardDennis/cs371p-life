@@ -65,13 +65,13 @@ public:
 	virtual char state() = 0;
 
 	// -------
-	// living
+	// isAlive
 	// -------
 	/**
 	 * Cells whether a cell is alive or not.
 	 * Since that information is simply stored as a bool in state, I could just return the value of state.
 	 */
-	bool living();
+	bool isAlive();
 
 	 };
 
@@ -218,12 +218,12 @@ public:
 	char state();
 
 	// -------
-	// living
+	// isAlive
 	// -------
 	/**
-	 * Runs living() for the cell type
+	 * Runs isAlive() for the cell type
 	 */
-	bool living();
+	bool isAlive();
 };
 
 template<typename C>
@@ -282,7 +282,7 @@ public:
 
 				C cell(temp);
 				grid[i].push_back(cell);
-				if(cell.living())
+				if(cell.isAlive())
 					++p;
 			}
 		}
@@ -340,7 +340,7 @@ private:
 			// For each cell pointed by the buffer, shift its state.
 			for(AbstractCell* change : buffer){
 				change->shift_state();
-				if(change->living())
+				if(change->isAlive())
 					++p;
 				else
 					--p;
