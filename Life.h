@@ -346,11 +346,11 @@ private:
 					--p;
 			}
 		}
-		/*for(int i = 0; i < r; ++i){
+		for(int i = 0; i < r; ++i){
 			for(int j = 0; j < c; ++j){
-				iter[i*r + j] = grid[i][j];
+				iter[i*c + j] = grid[i][j];
 			}
-		}*/
+		}
 	}
 
 
