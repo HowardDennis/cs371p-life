@@ -254,7 +254,7 @@ private:
 	/**
 	 * Iterable Vector
 	 */
-	vector<C> iter;
+	//vector<C> iter;
 public:
 	// -----------------
 	// e and f
@@ -286,11 +286,11 @@ public:
 					++p;
 			}
 		}
-		for(int i = 0; i < r; ++i){
+		/*for(int i = 0; i < r; ++i){
 			for(int j = 0; j < c; ++j){
 				iter.push_back(grid[i][j]);
 			}
-		}
+		}*/
 	}
 
 private:
@@ -346,11 +346,11 @@ private:
 					--p;
 			}
 		}
-		for(int i = 0; i < r; ++i){
+		/*for(int i = 0; i < r; ++i){
 			for(int j = 0; j < c; ++j){
 				iter[i*r + j] = grid[i][j];
 			}
-		}
+		}*/
 	}
 
 
@@ -387,11 +387,11 @@ public:
     }
     
     C* begin() { // 2nd: add typename
-   	return &iter[0];
+   	return 0; //&iter[0];
    }
 
    C* end() { // 3rd: add typename
-   	return &iter[iter.size() - 1];
+   	return 0; //&iter[iter.size() - 1];
    }
 };
 
