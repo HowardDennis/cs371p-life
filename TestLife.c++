@@ -454,14 +454,10 @@ TEST(Life, Life_Constructor2) {
 
 TEST(Life, Life_Constructor3) {
 	stringstream in("Cell\n4\n4\n0\n1\n....\n-**-\n-00-\n----");
-	cout << 0 << endl;
 	Life<Cell> l(in);
-	cout << 1 << endl;
 	stringstream out;
-	cout << 2 << endl;
 	l.print_grid(0, out);
-	cout << 3 << endl;
-	cout << out.str() << endl;
+	cout << out.str();
 	ASSERT_EQ("Generation = 0, Population = 4.\n....\n-**-\n-00-\n----\n\n", out.str());
 }
 
