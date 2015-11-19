@@ -1,0 +1,443 @@
+commit d768ee9e2f9cd7b7162d9a0edb4de32befd2ec3f
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Thu Nov 19 16:13:12 2015 -0600
+
+    Changed bool living() to isAlive() and remade begin() and end()
+
+commit 5191912fc9c9297e9df535361fa18337774b7abb
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Thu Nov 19 16:11:04 2015 -0600
+
+    Create README.md
+
+commit 6417005d0cf8a4ddc4839ce176d6a81e4e37d854
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Thu Nov 19 16:09:34 2015 -0600
+
+    Update TestLife.c++
+
+commit 4301ccc68f23c1be4944d403ca0b5b34bab31b5c
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Thu Nov 19 16:09:09 2015 -0600
+
+    Update Life.c++
+
+commit 320287cad30925721a0ff0aaa67e7ac0d1adcd69
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Thu Nov 19 16:08:44 2015 -0600
+
+    Update Life.h
+
+commit 43c2d3ec6ebc62a74fbe9859eaf211d75ca83875
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Thu Nov 19 16:07:19 2015 -0600
+
+    Update TestLife.c++
+
+commit 876b4d04e82fd791d965dde23fc4b427564ddff2
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Thu Nov 19 16:05:26 2015 -0600
+
+    Update Life.h
+
+commit dccac8c8409cb56930a9b083cdbd5ece04bcd505
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Thu Nov 19 16:02:19 2015 -0600
+
+    Update Life.h
+
+commit f0f784ae62c454a06bf3d527c2b210e5dbe3229c
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Thu Nov 19 15:59:32 2015 -0600
+
+    Update TestLife.c++
+
+commit 3ab7b1694f06e4e9cb99c52ea9f64520648321f1
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Thu Nov 19 15:58:35 2015 -0600
+
+    Update TestLife.c++
+
+commit 7a0ea78ea368a2fd0b8ac0c09159599032647680
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Thu Nov 19 15:57:31 2015 -0600
+
+    Update TestLife.c++
+
+commit 126b0c72402f03e79aa55a96f1758f436de231c4
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Thu Nov 19 15:57:16 2015 -0600
+
+    Update Life.h
+
+commit 7792e89733441a32c2873ded0e86376f46062e2d
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Thu Nov 19 15:56:06 2015 -0600
+
+    Update TestLife.c++
+
+commit 07dff40dc48b5be56c141e2532b949b562c4e315
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Thu Nov 19 15:53:59 2015 -0600
+
+    Update TestLife.c++
+
+commit d252b9a434bec5083425dee9cd014825bd26ef08
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Thu Nov 19 15:49:16 2015 -0600
+
+    Update Life.h
+
+commit 88b35c67ce692e3f0c38e78c1d9c94fba59131e6
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Thu Nov 19 15:48:18 2015 -0600
+
+    Update Life.h
+
+commit 4027ad37715725d5ac1a254a4081fe2a867bee8e
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Thu Nov 19 15:46:16 2015 -0600
+
+    Update Life.h
+
+commit eeba2f67e2c9c4f38289841f1bc635a976490009
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Thu Nov 19 15:45:39 2015 -0600
+
+    Update Life.h
+
+commit b2d21fb7bd37b927a57c31b94b5aa8bdc8247188
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Thu Nov 19 15:43:00 2015 -0600
+
+    Update Life.h
+
+commit 7409035a9c5b5e3ff9947f721131729b9ca07288
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Thu Nov 19 15:41:50 2015 -0600
+
+    Update Life.h
+
+commit 921aeda4b348377227718ac09843f68447bfc533
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Thu Nov 19 15:40:12 2015 -0600
+
+    Update Life.h
+
+commit 63fcdcc6dcbd3e8377fb0028ef05cb592c5a478b
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Thu Nov 19 15:39:55 2015 -0600
+
+    Update TestLife.c++
+
+commit 4f0704514fdf0e81991f99ba19fea920e7e00f54
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Thu Nov 19 15:39:15 2015 -0600
+
+    Update Life.h
+
+commit d0efecc7945c9bdc3f09971fe659f744359e854f
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Thu Nov 19 15:36:48 2015 -0600
+
+    Update Life.h
+
+commit e1e0a3e323a8a2b83a4dc62b00bd544a41aff9eb
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Thu Nov 19 15:36:08 2015 -0600
+
+    Update Life.h
+
+commit 0831d6cf5caf0ec2d5ce1bacb1f956391f2fc7a8
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Thu Nov 19 15:34:31 2015 -0600
+
+    Update Life.h
+
+commit 64740dd1e6fc40af49fdd5a9a30370f687d8a8d7
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Thu Nov 19 15:32:15 2015 -0600
+
+    Update TestLife.c++
+
+commit 8ac54c3b877a2553dfbed2b7c01e32ba1714ef70
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Thu Nov 19 15:24:44 2015 -0600
+
+    Update TestLife.c++
+
+commit f41779dabc73f2df20280d62e1c90c779f964f6c
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Thu Nov 19 15:23:06 2015 -0600
+
+    Update Life.h
+
+commit f089837aebc2bda6982b74c1ac4f7466fd3d523c
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Thu Nov 19 15:18:42 2015 -0600
+
+    Update Life.h
+
+commit 2d9ad7778107be67c2401e21470b752bb52fc9b6
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Thu Nov 19 15:15:46 2015 -0600
+
+    Update TestLife.c++
+
+commit e5ce80c2f5cd0a70f609504a1fbe4599b32a3eb5
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Thu Nov 19 15:12:19 2015 -0600
+
+    Update Life.h
+
+commit 1f99d8846758e281c0ab0cf1a302dd2afde17c48
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Thu Nov 19 15:10:29 2015 -0600
+
+    Update Life.h
+
+commit 26dde6f99340bb958641bf21333069cbc5aadfcd
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Thu Nov 19 15:03:52 2015 -0600
+
+    Update Life.h
+
+commit 25b2ca8577a9b73e1505297efd11b9d64d028d9c
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Thu Nov 19 15:00:36 2015 -0600
+
+    Update Life.h
+
+commit 0e3fb987238b1e2872eaebeb259a6859b3919381
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Thu Nov 19 14:54:52 2015 -0600
+
+    Update Life.h
+
+commit 7abfddbecb81f9792b5d8c160bb435ed76e700e0
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Thu Nov 19 14:53:02 2015 -0600
+
+    Update Life.h
+
+commit e678c1991357dc36c2617f962c673222765d84c4
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Thu Nov 19 14:52:38 2015 -0600
+
+    Update Life.h
+
+commit a7e9383c08045dfca0fc019c6979d31300d2a575
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Thu Nov 19 14:48:19 2015 -0600
+
+    Update Life.h
+
+commit 8ec6c17917fd71dede167fe0b0e4268546a04af4
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Thu Nov 19 14:46:25 2015 -0600
+
+    Update Life.h
+
+commit e90d75351e34e1e6f838a891ebe5601cb7e264f3
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Thu Nov 19 14:18:58 2015 -0600
+
+    corrected acceptance tests
+
+commit 8573af6a816ba922d355ca29469e4e48870fc13f
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Thu Nov 19 14:16:55 2015 -0600
+
+    Update makefile
+
+commit 578ece26112658b284060dd530c4e95fb45fb259
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Thu Nov 19 14:14:40 2015 -0600
+
+    Made tests valid
+
+commit 6a0df676432abb0fe3a053d312b8901318855ca6
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Wed Nov 18 22:53:12 2015 -0600
+
+    added log
+
+commit c81acbff4228ec152300a9fd9843fd43c5621844
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Wed Nov 18 22:49:39 2015 -0600
+
+    made html
+
+commit 905c9d6bf80cc4c0493de7a18daf7384082b644c
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Wed Nov 18 22:46:26 2015 -0600
+
+    made pdf
+
+commit 2b94d21920034ee2a923dd1fc4c08d238b811264
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Wed Nov 18 22:23:42 2015 -0600
+
+    Just the pdf left
+
+commit 8895c90e085333b86ca507016f58adb0b7cc8d6f
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Wed Nov 18 18:17:55 2015 -0600
+
+    Update TestLife.out
+
+commit a8e29e3488c77aa54757db80d5f1c96ee8f185d4
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Wed Nov 18 17:57:15 2015 -0600
+
+    fixed bug in RunLife.c++
+
+commit e856e079f86ff954d44b7f753ba6c473d4dd4c6e
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Wed Nov 18 17:56:21 2015 -0600
+
+    Update RunLife.c++
+
+commit b138941aac660d3e04fcd09399a0b19e688cb10e
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Wed Nov 18 17:48:58 2015 -0600
+
+    made acceptance tests and output
+
+commit 4842806d88f4c72db62036daf107c551cbd8302b
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Wed Nov 18 17:46:55 2015 -0600
+
+    Update RunLife.c++
+
+commit 21253b9f3f390ba7cdd707b8cb612a797d7eda5f
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Wed Nov 18 17:41:53 2015 -0600
+
+    Update RunLife.in
+
+commit debb6009fe267c2e97f4fb1e3f6f5243d49fd691
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Wed Nov 18 16:08:03 2015 -0600
+
+    Update RunLife.in
+
+commit 43248fd8cf7322d4e1304f8adb6757fd6b5035de
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Wed Nov 18 16:01:11 2015 -0600
+
+    Update RunLife.in
+
+commit 98ac9f1184275b6a9469fc09e2bad1980b02fce5
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Wed Nov 18 16:00:26 2015 -0600
+
+    Update RunLife.in
+
+commit fbf836d36666ef6abe8f7c6182854e4c6b26636d
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Wed Nov 18 15:59:39 2015 -0600
+
+    Update RunLife.out
+
+commit fd18e17ae2697ace47e390902c2cbb4b776d2e2d
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Wed Nov 18 15:58:51 2015 -0600
+
+    Update RunLife.out
+
+commit 9a945942b248382fffbbb69f766f2e81a6eb8a8a
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Wed Nov 18 15:43:57 2015 -0600
+
+    Update RunLife.out
+
+commit c03e710bcbe3b1fc3f86fd3bc8fa03f40681dbfc
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Wed Nov 18 09:40:45 2015 -0600
+
+    passing initial acceptance tests
+
+commit 8e90b6dcbca64b6f2316d049358d30f991196d37
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Wed Nov 18 09:37:29 2015 -0600
+
+    Update RunLife.c++
+
+commit 63800e290d1b07741ef8c4981370f5e4a16163ad
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Wed Nov 18 09:34:24 2015 -0600
+
+    Update RunLife.c++
+
+commit 8f580e93931a24dab3a1e46e705a4fac1de47e00
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Wed Nov 18 09:26:11 2015 -0600
+
+    Update RunLife.in
+
+commit 8925ea27cdafebd60406500a9a4c429aabec9f80
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Tue Nov 17 23:16:04 2015 -0600
+
+    improved documentation
+
+commit 81c289ddc2230b52586934083b9338f8f83e2572
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Tue Nov 17 23:06:16 2015 -0600
+
+    Almost done, just need acceptance tests
+
+commit d8b17145cd8238ffe421b17cde5c09ae4d7082a4
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Tue Nov 17 21:53:40 2015 -0600
+
+    finished Life.c++, need to fix printing
+
+commit 7d8c9389792d7395d75a80d815e8ba25a484d90a
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Tue Nov 17 20:24:07 2015 -0600
+
+    made most of Life.h
+
+commit de6a88f387d1aa9b673443eac22a353a1221fac7
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Mon Nov 16 21:18:32 2015 -0600
+
+    added to Life.h
+
+commit 354f73d2a0fbf79294981eefdff1b4ca9963dafd
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Mon Nov 16 20:36:41 2015 -0600
+
+    Create Life.h
+
+commit a2c629cb5ec8b8c8797c113027a29235683f40ac
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Mon Nov 16 20:21:15 2015 -0600
+
+    Create .travis.yml
+
+commit 70e7582898bdf6d44c94fa6a93cc49e260b4e1d9
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Mon Nov 16 20:20:48 2015 -0600
+
+    Update makefile
+
+commit 7777d7d0e3cb47b31cd3004357f0295c5c3c1c6a
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Mon Nov 16 20:19:53 2015 -0600
+
+    Delete Doxyfile
+
+commit fae4ea7fdddc4ad67a8f0f5588c1ccaa1cc25d16
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Mon Nov 16 19:31:22 2015 -0600
+
+    more initial files copied from Darwin
+
+commit 4bfb6e0db286062a88824ad8a4078f1833d73f3d
+Author: HowardDennis <h2dennis@gmail.com>
+Date:   Mon Nov 16 19:22:29 2015 -0600
+
+    added initial files
