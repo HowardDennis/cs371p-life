@@ -386,11 +386,11 @@ public:
     	return grid[n/w][n%w];
     }
 
-    vector<C>::iterator begin() {
+    std::vector<C>::iterator begin() {
     	return iter.begin();
     }
 
-    vector<C>::iterator end() {
+    std::vector<C>::iterator end() {
     	return iter.end();
     }
 };
