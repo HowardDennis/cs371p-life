@@ -386,9 +386,6 @@ public:
     	return grid[n/w][n%w];
     }
     
-   typedef typename vector<C>::iterator iterator; //for begin and end
-
-
    typename vector<C>::iterator begin() { // 2nd: add typename
    	return iter.begin();
    }
