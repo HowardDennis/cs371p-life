@@ -3,7 +3,6 @@
 #include <vector>	// vector
 #include <iostream> // endl, istream, ostream
 #include <sstream>  // istringstream
-#include <iterator> // input_iterator_tag
 #include <cstdlib>	// rand
 
 using namespace std;
@@ -345,6 +344,11 @@ private:
 					++p;
 				else
 					--p;
+			}
+		}
+		for(int i = 0; i < grid.size(); ++i){
+			for(int j = 0; j < gid[0].size(); ++j){
+				iter[i*grid.size() + j] = grid[i][j];
 			}
 		}
 	}
