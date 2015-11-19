@@ -373,7 +373,7 @@ public:
 	// begin, end and at
 	// -----------------
 	/**
-	 * Make the grid in Life iterable
+	 * Make the grid in Life iterable. Begin and end uses a different vector, so that the original is immutable
 	 */
     C at(int n) {
     	assert(n >= 0 && (n < grid[0].size()*grid.size()));
@@ -381,22 +381,22 @@ public:
     	return grid[n/w][n%w];
     }
     
-    C* begin() { // 2nd: add typename
+    C* begin() {
     	for(int i = 0; i < grid.size(); ++i){
 		for(int j = 0; j < grid[0].size(); ++j){
 			iter[i*grid[0].size() + j] = grid[i][j];
 		}
 	}
-   	return &iter[0]; //&iter[0];
+   	return &iter[0];
    }
 
-   C* end() { // 3rd: add typename
+   C* end() {
    	for(int i = 0; i < grid.size(); ++i){
 		for(int j = 0; j < grid[0].size(); ++j){
 			iter[i*grid[0].size() + j] = grid[i][j];
 		}
 	}
-   	return &iter[iter.size()]; //&iter[iter.size() - 1];
+   	return &iter[iter.size()];
    }
 };
 
