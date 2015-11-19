@@ -48,24 +48,24 @@ TEST(Life, AbstractCell_ShiftState4) {
 	ASSERT_EQ(f.state(), '0');
 }
 
-TEST(Life, AbstractCell_Living1) {
+TEST(Life, AbstractCell_isAlive1) {
 	ConwayCell c('*');
-	ASSERT_TRUE(c.living());
+	ASSERT_TRUE(c.isAlive());
 }
 
-TEST(Life, AbstractCell_Living2) {
+TEST(Life, AbstractCell_isAlive2) {
 	ConwayCell c('.');
-	ASSERT_FALSE(c.living());
+	ASSERT_FALSE(c.isAlive());
 }
 
-TEST(Life, AbstractCell_Living3) {
+TEST(Life, AbstractCell_isAlive3) {
 	FredkinCell f('0');
-	ASSERT_TRUE(f.living());
+	ASSERT_TRUE(f.isAlive());
 }
 
-TEST(Life, AbstractCell_Living4) {
+TEST(Life, AbstractCell_isAlive4) {
 	FredkinCell f('-');
-	ASSERT_FALSE(f.living());
+	ASSERT_FALSE(f.isAlive());
 }
 
 // -----------
@@ -394,24 +394,24 @@ TEST(Life, Cell_State3) {
 	ASSERT_EQ(c2.state(), '*');
 }
 
-TEST(Life, Cell_Living1) {
+TEST(Life, Cell_isAlive1) {
 	Cell c('*');
-	ASSERT_TRUE(c.living());
+	ASSERT_TRUE(c.isAlive());
 }
 
-TEST(Life, Cell_Living2) {
+TEST(Life, Cell_isAlive2) {
 	Cell c('.');
-	ASSERT_FALSE(c.living());
+	ASSERT_FALSE(c.isAlive());
 }
 
-TEST(Life, Cell_Living3) {
+TEST(Life, Cell_isAlive3) {
 	Cell c('0');
-	ASSERT_TRUE(c.living());
+	ASSERT_TRUE(c.isAlive());
 }
 
-TEST(Life, Cell_Living4) {
+TEST(Life, Cell_isAlive4) {
 	Cell c('-');
-	ASSERT_FALSE(c.living());
+	ASSERT_FALSE(c.isAlive());
 }
 
 TEST(Life, Cell_GetPointer1) {
