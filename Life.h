@@ -249,6 +249,13 @@ private:
 	 * Stored the world as a vector of vectors of user specified type.
 	 */
 	vector<vector<C>> grid;
+	// ----
+	// iter
+	// ----
+	/**
+	 * Iterable Vector
+	 */
+	vector<C> iter;
 public:
 	// -----------------
 	// e and f
@@ -280,6 +287,10 @@ public:
 					++p;
 			}
 		}
+		for(int i = 0; i < r; ++i){
+			for(int j = 0; j < c; ++j){
+				iter.push_back(grid[i][j]);
+			}
 	}
 
 private:
