@@ -387,11 +387,11 @@ public:
     }
     
     C* begin() { // 2nd: add typename
-   	return *iter[0];
+   	return &iter[0];
    }
 
    C* end() { // 3rd: add typename
-   	return *iter[iter.size() - 1];
+   	return &iter[iter.size() - 1];
    }
 };
 
