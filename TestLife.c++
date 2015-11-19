@@ -527,17 +527,18 @@ TEST(Life, Life_begin3) {
 TEST(Life, Life_end1) {
 	stringstream in("ConwayCell\n5\n5\n1\n1\n.....\n..*..\n..*..\n..*..\n....*");
 	Life<ConwayCell> l(in);
-	ASSERT_EQ((--l.end())->state(), '*');
+	ASSERT_EQ((l.end() - 1)->state(), '*');
 }
 
 TEST(Life, Life_end2) {
-	stringstream in("ConwayCell\n5\n5\n1\n1\n.*...\n..*..\n..*..\n..*..\n.....");
+	stringstream in("ConwayCell\n5\n5\n1\n1\n.*...\n..*..\n..*..\n..*..\n.*...");
 	Life<ConwayCell> l(in);
-	ASSERT_EQ((l.end() - 1)->state(), '.');
+	ConwayCell* c = l.end();
+	ASSERT_EQ((c -= 4)->state(), '*');
 }
 
 TEST(Life, Life_end3) {
-	stringstream in("ConwayCell\n5\n5\n1\n1\n.....\n*.*..\n..*..\n..*..\n*....");
+	stringstream in("ConwayCell\n5\n5\n1\n1\n.....\n*.*..\n..*..\n....*\n.....");
 	Life<ConwayCell> l(in);
-	ASSERT_EQ((l.end() - 5)->state(), '*');
+	ASSERT_EQ((l.end() - 6)->state(), '*');
 }
