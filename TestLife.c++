@@ -514,7 +514,8 @@ TEST(Life, Life_begin1) {
 TEST(Life, Life_begin2) {
 	stringstream in("ConwayCell\n5\n5\n1\n1\n.*...\n..*..\n..*..\n..*..\n.....");
 	Life<ConwayCell> l(in);
-	ASSERT_EQ((++l.begin())->state(), '*');
+	ConwayCell* c = l.begin();
+	ASSERT_EQ((++c)->state(), '*');
 }
 
 TEST(Life, Life_begin3) {
