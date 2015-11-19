@@ -3,6 +3,7 @@
 #include <vector>	// vector
 #include <iostream> // endl, istream, ostream
 #include <sstream>  // istringstream
+#include <iterator> // input_iterator_tag
 #include <cstdlib>	// rand
 
 using namespace std;
@@ -336,6 +337,8 @@ private:
 		}
 	}
 
+
+
 public:
 	// ----------
 	// print_grid
@@ -354,4 +357,25 @@ public:
 		}
 		w << endl;
 	}
+
+	// -----------------
+	// begin, end and at
+	// -----------------
+	/**
+	 * Make the grid in Life iterable
+	 */
+    C& at(int n) {
+    	assert(n >= 0 && (n < grid[0].size()*grid.size()));
+    	int w = grid[0].size();
+    	return grid[n/w][n%w];
+    }
+
+    C* begin() {
+    	return &grid[0][0];
+    }
+
+    C* end() {
+    	return &grid[grid.size() - 1][grid[0].size()];
+    }
 };
+

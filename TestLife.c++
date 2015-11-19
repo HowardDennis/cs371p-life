@@ -486,3 +486,57 @@ TEST(Life, Life_RunEvo3) {
 	l.print_grid(2, out2);
 	ASSERT_EQ("Generation = 2, Population = 12.\n-0-1-\n0-*-1\n-*-*-\n1-*-0\n-1-0-\n\n", out2.str());
 }
+
+TEST(Life, Life_at1) {
+	stringstream in("Cell\n5\n5\n2\n1\n-----\n--00-\n-0-0-\n-00--\n-----");
+	Life<Cell> l(in);
+	ASSERT_EQ(l.at(0).state(), '-');
+}
+
+TEST(Life, Life_at2) {
+	stringstream in("Cell\n5\n5\n2\n1\n-----\n--00-\n-0-0-\n-00--\n-----");
+	Life<Cell> l(in);
+	ASSERT_EQ(l.at(7).state(), '0');
+}
+
+TEST(Life, Life_at3) {
+	stringstream in("Cell\n5\n5\n2\n1\n-----\n--00-\n-0-0-\n-00--\n-----");
+	Life<Cell> l(in);
+	ASSERT_EQ(l.at(24).state(), '-');
+}
+
+TEST(Life, Life_begin1) {
+	stringstream in("ConwayCell\n5\n5\n1\n1\n.....\n..*..\n..*..\n..*..\n.....");
+	Life<ConwayCell> l(in);
+	ASSERT_EQ(l.begin()->state(), '.');
+}
+
+TEST(Life, Life_begin2) {
+	stringstream in("ConwayCell\n5\n5\n1\n1\n.*...\n..*..\n..*..\n..*..\n.....");
+	Life<ConwayCell> l(in);
+	ASSERT_EQ((l.begin() + 1)->state(), '*');
+}
+
+TEST(Life, Life_begin3) {
+	stringstream in("ConwayCell\n5\n5\n1\n1\n.....\n*.*..\n..*..\n..*..\n.....");
+	Life<ConwayCell> l(in);
+	ASSERT_EQ((l.begin() + 4)->state(), '.');
+}
+
+TEST(Life, Life_end1) {
+	stringstream in("ConwayCell\n5\n5\n1\n1\n.....\n..*..\n..*..\n..*..\n.....");
+	Life<ConwayCell> l(in);
+	ASSERT_EQ((l.end() - 1)->state(), '.');
+}
+
+TEST(Life, Life_end2) {
+	stringstream in("ConwayCell\n5\n5\n1\n1\n.*...\n..*..\n..*..\n..*..\n.....");
+	Life<ConwayCell> l(in);
+	ASSERT_EQ((l.end() - 1)->state(), '.');
+}
+
+TEST(Life, Life_end3) {
+	stringstream in("ConwayCell\n5\n5\n1\n1\n.....\n*.*..\n..*..\n..*..\n*....");
+	Life<ConwayCell> l(in);
+	ASSERT_EQ((l.end() - 5)->state(), '*');
+}
