@@ -15,7 +15,7 @@ AbstractCell::AbstractCell(char a)
 
 void AbstractCell::shift_state(){alive = !alive;}
 
-bool AbstractCell::living(){ return alive;}
+bool AbstractCell::isAlive(){ return alive;}
 
 // -----------
 // Conway Cell
@@ -25,7 +25,7 @@ ConwayCell::ConwayCell(char a): AbstractCell(a) {}
 bool ConwayCell::evolve(AbstractCell** const n){
 	int c = 0;
 	for(int i = 0; i <= 7; ++i){
-		if(n[i] != NULL && n[i]->living())
+		if(n[i] != NULL && n[i]->isAlive())
 			++c;
 	}
 	assert(c >= 0 && c <= 8);
@@ -56,13 +56,13 @@ FredkinCell::FredkinCell(char a): AbstractCell(a){
 
 bool FredkinCell::evolve(AbstractCell** const n){
 	int c = 0;
-	if(n[1] && n[1]->living())
+	if(n[1] && n[1]->isAlive())
 		++c;
-	if(n[3] && n[3]->living())
+	if(n[3] && n[3]->isAlive())
 		++c;
-	if(n[4] && n[4]->living())
+	if(n[4] && n[4]->isAlive())
 		++c;
-	if(n[6] && n[6]->living())
+	if(n[6] && n[6]->isAlive())
 		++c;
 	assert(c >= 0 && c <= 4);
 
@@ -133,8 +133,8 @@ char Cell::state(){
 	return _p->state();
 }
 
-bool Cell::living(){
-	return _p->living();
+bool Cell::isAlive(){
+	return _p->isAlive();
 }
 
 AbstractCell* Cell::operator & (){
